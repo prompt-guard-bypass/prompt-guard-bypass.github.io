@@ -231,6 +231,100 @@
   font-size: 0.9rem;
 }
 
+/* Venue Badge */
+.venue-badge {
+  display: inline-block;
+  background-color: white;
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid #e0e0e0;
+  margin: 1rem 0 0;
+}
+
+/* Guard-Model Results Table */
+.table-container {
+  /* Break out of the ~836px content column so the 10-column table fits
+     without horizontal scrolling on desktop. The block is sized to the
+     table's natural width, centered on the page, and capped so it never
+     exceeds the viewport (overflow-x is a fallback for narrow screens). */
+  width: max-content;
+  max-width: min(1180px, 92vw);
+  margin: 1.5rem 0 0.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.results-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+  background-color: #ffffff;
+}
+
+.results-table th,
+.results-table td {
+  border: 1px solid #e0e0e0;
+  padding: 0.45rem 0.6rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.results-table thead th {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.results-table td.model-name {
+  text-align: left;
+  font-weight: 500;
+}
+
+.results-table tr.group-row td {
+  background-color: #ececec;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+/* Citation Copy Button */
+.citation-note {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 1rem 0;
+}
+
+.citation-wrapper {
+  position: relative;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.copy-button:hover {
+  background-color: #004499;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
@@ -261,5 +355,9 @@
 
   .abstract {
     text-align: left;
+  }
+
+  .results-table {
+    font-size: 0.75rem;
   }
 }
